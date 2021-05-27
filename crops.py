@@ -8,5 +8,5 @@ for root, dirs, files in os.walk('./'):
             im = Image.open(file)
             width, height = im.size
 
-            crop_image = im.crop((0, 0, width, height-45)) #crop((left, top, right, bottom))
-            crop_image.save(im.filename + str(idx) + '.png')
+            crop_image = im.crop((0, 0, width, height-10)) #crop((left, top, right, bottom))
+            crop_image.save(im.filename.split('.png')[0] + str(idx) + '.png')
